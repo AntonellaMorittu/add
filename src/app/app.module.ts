@@ -1,20 +1,18 @@
+import { ContactsService } from './services/contacts.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { VideoPlayerComponent } from './video-player/video-player.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    VideoPlayerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ContactsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
